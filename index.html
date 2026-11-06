@@ -9,197 +9,194 @@
 <meta property="og:description" content="You know your product. Let's make sure your customers and team do too.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cedergrenlearning.com/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23183153'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23FAF6EF'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  /* Brand Reference v2.1 palette. Gold is accent only, never text on cream. */
+  /* Brand palette. Gold is accent only; never use it as text on cream. */
   :root {
-    --cream: #FAF6EF;
-    --ink: #1E293B;
-    --navy: #183153;
-    --teal: #1B4B4A;
-    --gold: #F4C542;
-    --muted: #46536A;
+    --cream: #FAF6EF; --sand: #EAE5DA; --ink: #1E293B; --navy: #183153;
+    --teal: #1B4B4A; --gold: #F4C542; --muted: #46536A;
     --serif: "Fraunces", Georgia, "Times New Roman", serif;
     --sans: "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   *, *::before, *::after { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 1.125rem; line-height: 1.65; }
-  a { color: var(--teal); text-underline-offset: 0.2em; }
-  a:hover { color: var(--navy); }
-  :focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; border-radius: 2px; }
-  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 1.5rem; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; }
+  img { max-width: 100%; height: auto; }
+  a { color: var(--teal); }
+  :focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; border-radius: 3px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+  h1, h2, h3 { font-family: var(--serif); color: var(--navy); font-weight: 500; margin: 0; }
 
-  /* Wordmark: name, then a dotted line that ends in a gold dot */
-  .masthead { padding: 1.75rem 0 0; display: flex; align-items: center; gap: 0.9rem; }
-  .wordmark { font-family: var(--serif); font-size: 1.5rem; color: var(--navy); letter-spacing: -0.01em; white-space: nowrap; }
-  .wordmark b { font-weight: 600; }
-  .wordmark span { font-weight: 300; }
-  .trail { flex: 1; max-width: 220px; height: 14px; position: relative; }
-  .trail::before { content: ""; position: absolute; left: 0; right: 14px; top: 6px; border-top: 3px dotted rgba(24,49,83,0.45); }
-  .trail::after { content: ""; position: absolute; right: 0; top: 0; width: 14px; height: 14px; border-radius: 50%; background: var(--gold); }
+  .eyebrow { display: flex; align-items: center; gap: 0.75rem; margin: 0 0 1.25rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); }
+  .eyebrow::after { content: ""; width: 2.2rem; height: 2px; background: var(--gold); }
+  .eyebrow.plain { font-weight: 400; }
+  .band .eyebrow { color: #fff; }
 
-  .hero { display: flex; flex-wrap: wrap; gap: 2rem 3rem; align-items: center; padding: 4.5rem 0 4.5rem; }
-  .hero-copy { flex: 1 1 460px; }
-  .hero-art { flex: 0 1 320px; margin: 0 auto; }
-  .hero-art img { display: block; width: 100%; height: auto; }
-  h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.3rem, 5vw, 3.7rem); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 1.5rem; color: var(--navy); max-width: 15em; }
-  .lede { font-size: 1.25rem; max-width: 34em; margin: 0 0 1.5rem; }
+  .button { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gold); color: var(--navy); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; padding: 0.95rem 1.6rem; border-radius: 999px; }
+  .button:hover { background: #FFD65E; }
+  .button.small { padding: 0.6rem 1.1rem; font-size: 0.75rem; white-space: nowrap; }
 
-  .button { display: inline-block; padding: 0.85rem 1.5rem; background: var(--navy); color: var(--cream); font-weight: 600; text-decoration: none; border-radius: 999px; font-size: 1.0625rem; }
-  .button:hover { background: var(--teal); color: var(--cream); }
-  .button.on-dark { background: var(--gold); color: var(--navy); }
-  .button.on-dark:hover { background: #FFD65E; color: var(--navy); }
+  /* Header */
+  header.site { position: sticky; top: 0; z-index: 10; background: var(--cream); border-bottom: 1px solid rgba(24,49,83,0.14); }
+  header.site .wrap { display: flex; align-items: center; gap: 1.5rem; padding-top: 0.6rem; padding-bottom: 0.6rem; }
+  .logo img { display: block; height: 44px; width: auto; }
+  nav.links { display: flex; gap: 1.75rem; margin: 0 auto; }
+  nav.links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); text-decoration: none; }
+  nav.links a:hover { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
 
-  h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 1rem; color: var(--navy); }
-  h3 { font-family: var(--serif); font-weight: 600; font-size: 1.3rem; line-height: 1.2; margin: 0 0 0.4rem; color: var(--navy); }
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 3rem; align-items: center; padding-top: 5rem; padding-bottom: 4.5rem; }
+  h1 { font-size: clamp(2.3rem, 5vw, 3.6rem); line-height: 1.08; letter-spacing: -0.015em; }
+  .lede { font-size: 1.2rem; max-width: 33em; margin: 1.4rem 0 1.9rem; }
+  .hint { margin: 0.8rem 0 0; font-size: 0.9rem; color: var(--muted); }
+  .card { background: #fff; border: 1px solid rgba(24,49,83,0.14); border-radius: 10px; padding: 1.5rem; }
+  .card.gold { border-top: 3px solid var(--gold); }
+  .familiar .label { margin: 0 0 0.9rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); }
+  .familiar ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+  .familiar li { display: flex; gap: 0.7rem; }
+  .familiar li::before { content: ""; flex: none; width: 0.55rem; height: 0.55rem; margin-top: 0.6rem; border-radius: 50%; background: var(--gold); }
 
-  .reads { padding: 0 0 4.5rem; display: grid; gap: 3rem 4rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-  .reads p { margin: 0 0 1rem; max-width: 34em; }
-
-  .offers { padding: 0 0 4.5rem; }
-  .offer-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 1.25rem; }
-  .offer { background: #FFFFFF; border: 1px solid rgba(24,49,83,0.14); border-top: 4px solid var(--gold); border-radius: 6px; padding: 1.5rem 1.5rem 1.6rem; }
+  /* Offers */
+  .work { padding-top: 0.5rem; padding-bottom: 4.5rem; }
+  .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .offer h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
   .offer p { margin: 0; }
-  .formats { max-width: 40em; margin: 0; color: var(--muted); }
+  .formats { margin: 1.25rem 0 0; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
-  /* Path band: one dotted line runs through the steps */
-  .band { background: var(--navy); color: #F4EFE4; padding: 5rem 0 5.25rem; }
-  .band h2 { color: #FFFFFF; margin-bottom: 2.5rem; }
-  .path { position: relative; margin: 0; padding: 0; list-style: none; }
-  .path::before { content: ""; position: absolute; left: 11px; top: 14px; bottom: 28px; border-left: 3px dotted rgba(244,197,66,0.7); }
-  .path li { position: relative; padding: 0 0 2.2rem 3.4rem; max-width: 40em; }
-  .path li:last-child { padding-bottom: 0; }
-  .path li::before { content: ""; position: absolute; left: 4px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: var(--gold); }
-  .path li:last-child::before { left: -1px; top: 4px; width: 28px; height: 28px; box-shadow: 0 0 0 6px rgba(244,197,66,0.22); }
-  .path h3 { color: #FFFFFF; font-size: 1.4rem; }
-  .path p { margin: 0; color: #DCE3EF; }
+  /* How I work */
+  .band { background: var(--navy); color: #F4EFE4; padding: 4.5rem 0 5rem; }
+  .steps { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
+  .steps::before { content: ""; position: absolute; left: 7px; right: 7px; top: 7px; border-top: 3px dotted rgba(244,197,66,0.7); }
+  .steps li { position: relative; padding-top: 2.1rem; }
+  .steps li::before { content: ""; position: absolute; left: 0; top: 0; width: 15px; height: 15px; border-radius: 50%; background: var(--gold); }
+  .steps li:last-child::before { top: -5px; left: -3px; width: 25px; height: 25px; box-shadow: 0 0 0 6px rgba(244,197,66,0.25); }
+  .steps h3 { color: #fff; font-size: 1.2rem; margin-bottom: 0.4rem; }
+  .steps p { margin: 0; color: #DCE3EF; font-size: 0.98rem; }
 
-  .why { padding: 5rem 0 4rem; }
-  .why-grid { display: grid; gap: 2rem 3rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 2rem; }
-  .why-grid p { margin: 0; }
-  .proof { margin: 2.5rem 0 0; max-width: 40em; }
+  /* About + close */
+  .about { padding-top: 4.5rem; padding-bottom: 2rem; }
+  .about .card { display: flex; align-items: center; gap: 1.4rem; }
+  .monogram { flex: none; width: 64px; height: 64px; border-radius: 50%; background: var(--navy); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 600; font-size: 1.5rem; }
+  .about p { margin: 0; }
+  .creds { margin-top: 0.6rem !important; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); }
+  .creds a { color: var(--navy); text-decoration: none; border-bottom: 2px solid var(--gold); }
 
-  .close { background: var(--teal); color: #F4EFE4; padding: 4rem 0; }
-  .close h2 { color: #FFFFFF; margin-bottom: 1.25rem; max-width: 22em; }
-  .close p { margin: 0 0 1.5rem; max-width: 34em; }
-  .close .note { margin: 1rem 0 0; font-size: 1rem; }
-  .close .note a { color: #FFFFFF; }
+  .close { padding-top: 2rem; padding-bottom: 4.5rem; }
+  .close .card { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; padding: 2.25rem; }
+  .close h2 { font-size: clamp(1.7rem, 3.2vw, 2.2rem); line-height: 1.15; margin-bottom: 0.6rem; }
+  .close p { margin: 0 0 1.4rem; }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+  .actions .alt { font-size: 0.95rem; color: var(--muted); }
+  .cordelia { width: 120px; }
 
-  footer { padding: 1.75rem 0 2.5rem; font-size: 0.9375rem; color: var(--muted); }
+  footer { padding: 0 0 2.5rem; font-size: 0.9rem; color: var(--muted); }
   footer .wrap { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; justify-content: space-between; }
 
-  @media (max-width: 560px) {
-    body { font-size: 1.0625rem; }
-    .hero { padding: 3rem 0 3.5rem; }
-    .trail { max-width: 120px; }
-    .reads, .offers { padding-bottom: 3.5rem; }
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 3rem; padding-bottom: 3rem; }
+    .offer-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; gap: 0; }
+    .steps::before { left: 7px; right: auto; top: 8px; bottom: 30px; border-top: 0; border-left: 3px dotted rgba(244,197,66,0.7); }
+    .steps li { padding: 0 0 1.75rem 2.4rem; }
+    .steps li:last-child { padding-bottom: 0; }
+    .steps li::before { top: 4px; }
+    .steps li:last-child::before { top: 0; left: -3px; }
     .band { padding: 3.5rem 0 4rem; }
-    .why { padding-top: 3.5rem; }
+    nav.links { display: none; }
+    header.site .wrap { justify-content: space-between; }
+    .logo img { height: 36px; }
+    .about .card { flex-direction: column; align-items: flex-start; }
+    .close .card { grid-template-columns: 1fr; padding: 1.75rem; }
+    .cordelia { width: 96px; order: -1; }
   }
 </style>
 </head>
 <body>
 
-<header class="wrap masthead">
-  <div class="wordmark"><b>Cedergren</b> <span>Learning</span></div>
-  <div class="trail" aria-hidden="true"></div>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Cedergren Learning, home"><img src="assets/wordmark.png" alt="Cedergren Learning" width="688" height="88"></a>
+    <nav class="links" aria-label="Main">
+      <a href="#work">What I work on</a>
+      <a href="#how">How I work</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="button small cta" href="mailto:hello@cedergrenlearning.com?subject=Let%27s%20talk">Start a conversation</a>
+  </div>
 </header>
 
-<main>
+<main id="top">
   <section class="wrap hero">
-    <div class="hero-copy">
+    <div>
+      <p class="eyebrow plain">Customer training &bull; Team training</p>
       <h1>You know your product. Let&rsquo;s make sure your customers and team do too.</h1>
-      <p class="lede">I find out what&rsquo;s getting in the way of your customers and team, build the training that fixes it, and check that it worked.</p>
-      <!-- Swap this mailto for the Google booking page URL when you have it. -->
-      <a class="button" href="mailto:stephanie@cedergrenlearning.com?subject=Free%2020-minute%20call">Ask for a free 20-minute call</a>
+      <p class="lede">I&rsquo;m Stephanie. I build training that helps customers and teams understand a product, and I&rsquo;m talking with founders and leaders about how that goes at their companies.</p>
+      <a class="button cta" href="mailto:hello@cedergrenlearning.com?subject=Let%27s%20talk">Start a conversation &rarr;</a>
+      <p class="hint">A short chat. Not a pitch.</p>
     </div>
-    <div class="hero-art">
-      <img src="cordelia.png" width="640" height="640" alt="Cordelia, a capybara in round glasses reading a book" onerror="this.parentElement.remove()">
-    </div>
+    <aside class="card gold familiar" aria-label="Sound familiar?">
+      <p class="label">Sound familiar?</p>
+      <ul>
+        <li>Customers ask the same questions again and again.</li>
+        <li>New people take a long time to get started.</li>
+        <li>The same few people keep explaining it.</li>
+        <li>You have guides, but people still aren&rsquo;t getting it.</li>
+      </ul>
+    </aside>
   </section>
 
-  <section class="wrap reads" aria-label="The problem">
-    <div>
-      <h2>The people who built it know it best</h2>
-      <p>The people who built your product know it inside and out. Your customers and the rest of your team don&rsquo;t.</p>
-    </div>
-    <div>
-      <p>They ask the same questions again and again and take a long time to get started. The same few people keep explaining it, and that takes time away from their own work. You may already have written guides, but people still aren&rsquo;t getting it.</p>
-    </div>
-  </section>
-
-  <section class="wrap offers" aria-labelledby="build">
-    <h2 id="build">What I can build for you</h2>
+  <section class="wrap work" id="work" aria-labelledby="work-h">
+    <p class="eyebrow" id="work-h">What I work on</p>
     <div class="offer-grid">
-      <div class="offer">
+      <div class="card offer">
         <h3>Customer training</h3>
-        <p>Teach your customers how to use your product.</p>
+        <p>Helping customers learn to use a product, especially when they take too long to get started or keep asking the same questions.</p>
       </div>
-      <div class="offer">
+      <div class="card offer">
         <h3>Team training</h3>
-        <p>Get your team up to speed on your product and how your company works.</p>
+        <p>Helping a team learn the product and how the company works, so the same few people aren&rsquo;t explaining it every time.</p>
       </div>
     </div>
-    <p class="formats">Outlines and guides for live classes, videos, online courses people take on their own, written guides, checklists and quick-reference sheets. I choose the format that fits the problem.</p>
+    <p class="formats">Live class guides &bull; Videos &bull; Online courses &bull; Written guides &bull; Checklists &bull; Quick-reference sheets</p>
   </section>
 
-  <section class="band" aria-labelledby="how">
+  <section class="band" id="how" aria-labelledby="how-h">
     <div class="wrap">
-      <h2 id="how">How it works</h2>
-      <ol class="path">
-        <li>
-          <h3>Find the problem</h3>
-          <p>I read what you already have and talk to the people who know your product best. Together we work out whether training is the right fix, and what people need to know and do.</p>
-        </li>
-        <li>
-          <h3>Plan the training</h3>
-          <p>We decide what to build and in what format.</p>
-        </li>
-        <li>
-          <h3>Build it</h3>
-          <p>You get the finished training.</p>
-        </li>
-        <li>
-          <h3>Check that it worked</h3>
-          <p>We tie it to a number you choose.</p>
-        </li>
+      <p class="eyebrow" id="how-h">How I work</p>
+      <ol class="steps">
+        <li><h3>Find the problem</h3><p>I read what exists and talk to the people who know the product best. Training isn&rsquo;t always the fix.</p></li>
+        <li><h3>Plan the training</h3><p>Decide what to build and in what format.</p></li>
+        <li><h3>Build it</h3><p>Make the training and hand it over.</p></li>
+        <li><h3>Check that it worked</h3><p>Tie it to a number the company chooses.</p></li>
       </ol>
     </div>
   </section>
 
-  <section class="wrap why" aria-labelledby="why">
-    <h2 id="why">Why work with me</h2>
-    <div class="why-grid">
+  <section class="wrap about" id="about" aria-label="About">
+    <div class="card">
+      <div class="monogram" aria-hidden="true">SC</div>
       <div>
-        <h3>Find out before you pay</h3>
-        <p>You learn whether training is the problem before you commit. The first call is free. A short paid session to find the problem is credited toward your project.</p>
-      </div>
-      <div>
-        <h3>See whether it worked</h3>
-        <p>I tie the results to a number you pick. I don&rsquo;t promise results.</p>
-      </div>
-      <div>
-        <h3>One person, start to finish</h3>
-        <p>You work with the same person from the first call to the finished training.</p>
-      </div>
-      <div>
-        <h3>You keep everything</h3>
-        <p>Everything I make is yours.</p>
+        <p>I&rsquo;m Stephanie Cedergren. Since 2018, I&rsquo;ve built onboarding programs, technical training, leadership development, and product videos for startups and large companies.</p>
+        <p class="creds">ATD Master Instructional Designer &bull; Everything DiSC Certified Facilitator &bull; <a href="https://www.stephaniecedergren.com/">Portfolio &rarr;</a></p>
       </div>
     </div>
-    <p class="proof">I&rsquo;ve made product videos and live-class training for a startup.</p>
   </section>
 
-  <section class="close">
-    <div class="wrap">
-      <h2>Not sure whether training is the problem?</h2>
-      <p>Start with a free 20-minute call. You tell me what&rsquo;s happening, and I tell you whether training is likely to help.</p>
-      <a class="button on-dark" href="mailto:stephanie@cedergrenlearning.com?subject=Free%2020-minute%20call">Ask for a free 20-minute call</a>
-      <p class="note">Or write to <a href="mailto:stephanie@cedergrenlearning.com">stephanie@cedergrenlearning.com</a></p>
+  <section class="wrap close" aria-label="Start a conversation">
+    <div class="card gold">
+      <div>
+        <h2>How do your customers and team learn your product?</h2>
+        <p>I&rsquo;d like to hear how it works at your company. It&rsquo;s a short conversation, not a pitch.</p>
+        <div class="actions">
+          <a class="button cta" href="mailto:hello@cedergrenlearning.com?subject=Let%27s%20talk">Start a conversation &rarr;</a>
+          <span class="alt">or email <a href="mailto:hello@cedergrenlearning.com">hello@cedergrenlearning.com</a></span>
+        </div>
+      </div>
+      <img class="cordelia" src="assets/cordelia.png" width="480" height="464" alt="Cordelia, a capybara in round glasses reading a book">
     </div>
   </section>
 </main>
@@ -207,9 +204,17 @@
 <footer>
   <div class="wrap">
     <span>Cedergren Learning is a trade name of Cedergren Learning Design, LLC.</span>
-    <a href="mailto:stephanie@cedergrenlearning.com">stephanie@cedergrenlearning.com</a>
+    <a href="mailto:hello@cedergrenlearning.com">hello@cedergrenlearning.com</a>
   </div>
 </footer>
 
+<script>
+  /* To send the buttons to your Google booking page, paste the link between the quotes.
+     Leave it empty and every button opens an email to hello@cedergrenlearning.com instead. */
+  var BOOKING_URL = "";
+  if (BOOKING_URL) {
+    document.querySelectorAll("a.cta").forEach(function (a) { a.href = BOOKING_URL; a.target = "_blank"; a.rel = "noopener"; });
+  }
+</script>
 </body>
 </html>
